@@ -1,0 +1,53 @@
+@namespace("org.kiji.dota")
+protocol Dota {
+  record AbilityUpgrade {
+    union { null, long } level;
+    union { null, long } ability;
+    union { null, long } time;
+  }
+
+  record AdditionalUnit {
+    union { null, string } unitname;
+    union { null, long } item_4;
+    union { null, long } item_5;
+    union { null, long } item_2;
+    union { null, long } item_3;
+    union { null, long } item_0;
+    union { null, long } item_1;
+  }
+
+  record Player {
+    union { null, long } gold_spent;
+    union { null, long } gold;
+    union { null, long } deaths;
+    union { null, long } hero_damage;
+    union { null, long } last_hits;
+    union { null, long } player_slot;
+    union { null, long } denies;
+    union { null, long } tower_damage;
+    union { null, long } hero_id;
+    union { null, long } xp_per_min;
+    union { null, long } account_id;
+    union { null, long } kills;
+    union { null, long } leaver_status;
+    union { null, long } hero_healing;
+    union { null, long } assists;
+    union { null, long } gold_per_min;
+    union { null, long } level;
+    union { null, long } item_4;
+    union { null, long } item_5;
+    union { null, long } item_2;
+    union { null, long } item_3;
+    union { null, long } item_0;
+    union { null, long } item_1;
+    union { null, array<AbilityUpgrade> } ability_upgrades;
+    union { null, array<AdditionalUnit> } additional_units;
+  }
+
+  record PickBan {
+    union { null, long } team;
+    union { null, long } hero_id;
+    union { null, long } order;
+    union { null, boolean } is_pick;
+  }
+}
