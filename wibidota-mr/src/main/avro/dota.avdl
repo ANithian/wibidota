@@ -1,5 +1,13 @@
 @namespace("org.kiji.dota")
 protocol Dota {
+  record Team {
+    union { null, long } id;
+    union { null, long } complete;
+    union { null, string } name;
+    union { null, long } logo;
+    union { null, long } tower_status;
+    union { null, long } barracks_status;
+  }
   record AbilityUpgrade {
     union { null, long } level;
     union { null, long } ability;
